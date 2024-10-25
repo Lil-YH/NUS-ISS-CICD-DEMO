@@ -30,7 +30,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-      name: Example workflow for Maven using Snyk
       
   security:
     runs-on: ubuntu-latest
