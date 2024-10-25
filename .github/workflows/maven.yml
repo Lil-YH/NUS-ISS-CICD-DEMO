@@ -21,6 +21,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Ensure mvnw is executable
+      run: chmod +x mvnw
     - name: Set up JDK 11
       uses: actions/setup-java@v4
       with:
@@ -35,6 +37,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - name: Ensure mvnw is executable
+        run: chmod +x mvnw
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/maven@master
         env:
